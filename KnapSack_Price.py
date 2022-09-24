@@ -8,11 +8,11 @@ def profitByWeight(Price_Weight: list, KnapSack: int) -> int:
         if KnapSack <= 0:
             break
 
-        if P_W[0] <= KnapSack:
-            Profit += P_W[1]
-            KnapSack -= P_W[0]
+        if P_W[1] <= KnapSack:
+            Profit += P_W[0]
+            KnapSack -= P_W[1]
         else:
-            Profit += (KnapSack/P_W[0])*P_W[1]
+            Profit += (KnapSack/P_W[1])*P_W[0]
             KnapSack -= P_W[0]
 
     return Profit
