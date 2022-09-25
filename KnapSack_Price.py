@@ -13,7 +13,7 @@ def profitByPrice(Price_Weight: list, KnapSack: int) -> int:
             KnapSack -= P_W[1]
         else:
             Profit += (KnapSack/P_W[1])*P_W[0]
-            KnapSack -= P_W[0]
+            KnapSack -= P_W[1]
 
     return round(Profit, 2)
 
