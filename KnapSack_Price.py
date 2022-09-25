@@ -1,5 +1,5 @@
 # Find Profit by Price
-def profitByWeight(Price_Weight: list, KnapSack: int) -> int:
+def profitByPrice(Price_Weight: list, KnapSack: int) -> int:
 
     Profit = 0
 
@@ -45,7 +45,7 @@ def main() -> None:
 
     print("Output :")
     # Print Profit
-    print(profitByWeight(Price_Weight, KnapSack))
+    print(profitByPrice(Price_Weight, KnapSack))
 
 
 if __name__ == '__main__':
