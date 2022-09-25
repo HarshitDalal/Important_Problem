@@ -15,7 +15,7 @@ def profitByPriceWeightRatio(Price_Weight_Ratio: list, KnapSack: int) -> int:
             Profit += (KnapSack/P_W[1])*P_W[0]
             KnapSack -= P_W[0]
 
-    return Profit
+    return round(Profit, 2)
 
 
 def main() -> None:
@@ -59,3 +59,16 @@ if __name__ == '__main__':
 # W2 : 30
 # W3 : 10
 # KS : 50
+
+# Output : 240.0
+
+# N : 3
+# P1 : 25
+# P2 : 24
+# P3 : 15
+# W1 : 18
+# W2 : 15
+# W3 : 10
+# KS : 20
+
+# Output : 31.5
