@@ -15,7 +15,7 @@ def profitByWeight(Weight_Price: list, KnapSack: int) -> int:
             Profit += (KnapSack/W_P[0])*W_P[1]
             KnapSack -= W_P[0]
 
-    return Profit
+    return round(Profit, 2)
 
 
 def main() -> None:
@@ -60,3 +60,17 @@ if __name__ == '__main__':
 # P2 : 120
 # P3 : 60
 # KS : 50
+
+# Output = 240.0
+
+# N : 3
+# W1 : 18
+# W2 : 15
+# W3 : 10
+# P1 : 25
+# P2 : 24
+# P3 : 15
+# KS : 20
+
+
+# Output = 31.0
