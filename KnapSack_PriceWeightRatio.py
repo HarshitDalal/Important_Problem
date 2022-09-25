@@ -38,7 +38,7 @@ def main() -> None:
     # Make pair of Price , Weight and Price/Weight
     Price_Weight_Ratio = []
     for P_W in zip(Price, Weight):
-        Price_Weight_Ratio.append((P_W[0], P_W[1], round(P_W[0]/P_W[1],2)))
+        Price_Weight_Ratio.append((P_W[0], P_W[1], round(P_W[0]/P_W[1], 2)))
 
     # Sort pair in descending order by Price
     Price_Weight_Ratio.sort(key=lambda x: x[2], reverse=True)
