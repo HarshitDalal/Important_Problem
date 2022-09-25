@@ -1,34 +1,26 @@
-def minCoins(n: int, arr: list, dp: list) -> int:
-    if n == 0:
+def minCoins(amount: int, coins: list, dp: list) -> int:
+    if amount == 0:
         return 0
 
-    ans = float('inf')
+    for c in coins:
+        for i in range(amount + 1):
+            if i >= c:
+                dp[i] = min(dp[i], dp[i - c] + 1)
 
-    for i in range(0, len(arr)):
+    if dp[amount] > amount:
+        return -1
 
-        if (n-arr[i] >= 0):
-
-            subAns = 0
-            if (dp[n-arr[i]] != -1):
-                subAns = dp[n-arr[i]]
-            else:
-                subAns = minCoins(n-arr[i], arr, dp)
-
-            if (subAns != float('inf') and subAns+1 < ans):
-                ans = subAns + 1
-
-    dp[n] = ans
-    return ans
+    return dp[amount]
 
 
 def main() -> None:
-    n = int(input())
-    arr = list(map(int, input().split()))
+    amount = int(input())
+    coins = list(map(int, input().split()))
 
-    dp = [-1]*(n+1)
+    dp = [amount+1]*(amount+1)
     dp[0] = 0
 
-    ans = minCoins(n, arr, dp)
+    ans = minCoins(amount, coins, dp)
     print(ans)
 
 
